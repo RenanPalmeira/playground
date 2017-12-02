@@ -1,0 +1,31 @@
+version: '3'
+services:
+
+  #twitter-stack-app:
+  #  image: 1science/sbt
+  #  command: sbt test
+  #  links:
+  #    - twitter-stack-database
+  #  volumes:
+  #    - ./:/app
+  #    - ~/.ivy2:/root/.ivy2
+  #    - ~/.m2:/root/.m2
+
+  # twitter-stack-pgadmin:
+  #   image: dpage/pgadmin4:2
+  #   links:
+  #      - twitter-stack-database
+  #   ports:
+  #      - '5050:5050'
+
+  twitter-stack-database:
+    restart: always
+    image: postgres:9.6
+    environment:
+      POSTGRES_USER: 'twitter'
+      POSTGRES_PASSWORD: 'twitter'
+      POSTGRES_DB: 'twitter'
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./database:/var/lib/postgresql/data
