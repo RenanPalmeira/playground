@@ -1,4 +1,10 @@
 # ignore
+java/spring-cloud-security-demo/auth-service/.mvn/
+java/spring-cloud-security-demo/auth-service/mvnw
+java/spring-cloud-security-demo/auth-service/mvnw.cmd
+java/spring-cloud-security-demo/pretty-service-sidecar/.mvn/
+java/spring-cloud-security-demo/pretty-service-sidecar/mvnw
+java/spring-cloud-security-demo/pretty-service-sidecar/mvnw.cmd
 /lib
 classes
 /native
