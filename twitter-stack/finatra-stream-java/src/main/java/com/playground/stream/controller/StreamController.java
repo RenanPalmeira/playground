@@ -1,6 +1,6 @@
 package com.playground.stream.controller;
 
-import com.google.inject.Singleton;
+import com.twitter.concurrent.AsyncStream;
 import com.twitter.finatra.http.AbstractController;
 import com.twitter.util.Future;
 
@@ -10,6 +10,8 @@ import com.twitter.util.Future;
 public class StreamController extends AbstractController {
 
     public void configureRoutes() {
+        get("/tweets", request -> AsyncStream.fromFuture(Future.value("pong")));
+
         get("/ping", request -> Future.value("pong"));
     }
 
